@@ -1,0 +1,44 @@
+.form__content__input_container {
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 22px;
+}
+
+.form_input_section_1__input_name__input {
+	width: 100%;
+	outline: none;
+	border: none;
+	background: transparent;
+	border: 1px solid rgb(0, 0, 0, 0.2);
+	color: rgb(61, 61, 61);
+	border-radius: 5px;
+	padding: 16px 20px 17px 22px;
+	transition: all 0.5s ease;
+}
+
+.form_input_section_1__input_name_label {
+	width: auto;
+	max-width: 80%;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	margin-left: 25px;
+	margin-top: -1px;
+	color: rgb(80, 79, 79);
+	font-size: 16px;
+	padding: 0px 10px;
+	pointer-events: none;
+	transition: all 0.3s ease;
+	text-overflow: ellipsis;
+	/* background: #eaf7fb; */
+	/* transform: translate(-10px, -26px) scale(0.8); */
+}
+
+.form__content__email_phone_number {
+	display: grid;
+	grid-template-columns: 47% 47%;
+	column-gap: 20px;
+	justify-content: space-between;
+}

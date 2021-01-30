@@ -1,0 +1,21 @@
+.form_title {
+	width: 100%;
+	display: flex;
+	margin-top: 10px;
+}
+
+.form_title__logo {
+	width: 100%;
+	width: 70px;
+	height: 70px;
+	/* margin-top: 20px; */
+	margin-right: 20px;
+}
+
+.form_title__text {
+	margin-top: 5px;
+	font-size: 20px;
+	font-family: CircularStd_Bold !important;
+	font-weight: 700;
+	/* -webkit-font-smoothing: antialiased; */
+}

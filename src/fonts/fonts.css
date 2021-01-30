@@ -1,0 +1,14 @@
+@font-face {
+	font-family: CircularStd_Medium;
+	src: url(./circular-std/CircularStd-Medium.ttf);
+}
+
+@font-face {
+	font-family: CircularStd_Regular;
+	src: url(./circular-std/CircularStd-Book.ttf);
+}
+
+@font-face {
+	font-family: CircularStd_Bold;
+	src: url(./circular-std/CircularStd-Bold.ttf);
+}
