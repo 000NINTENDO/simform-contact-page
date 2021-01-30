@@ -1,0 +1,11 @@
+.checkbox_list_container {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+@media screen and (max-width: 600px) {
+	.checkbox_list_container {
+		display: block;
+		grid-template-columns: 100%;
+	}
+}
