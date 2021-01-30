@@ -17,5 +17,22 @@
 	font-size: 20px;
 	font-family: CircularStd_Bold !important;
 	font-weight: 700;
+	color: rgb(61, 61, 61);
 	/* -webkit-font-smoothing: antialiased; */
+}
+
+@media screen and (min-width: 767px) {
+	.form_title__text {
+		font-size: 24px;
+	}
+}
+
+@media screen and (min-width: 991px) {
+	.form_title__text {
+		font-size: 28px;
+	}
+	.form_title__logo {
+		width: 90px;
+		height: 90px;
+	}
 }

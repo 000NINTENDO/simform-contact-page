@@ -20,7 +20,6 @@ const Form = () => {
 	const project_details_label = useRef();
 	const project_details_error_message = useRef();
 
-	console.log(budget);
 	const handleChange = (event) => {
 		const name = event.target.name;
 		const value = event.target.value;
@@ -126,7 +125,7 @@ const Form = () => {
 					</section>
 				</section>
 				<section className="form_input_section_2">
-					<h4 className="form_input_section_2__heading form_input_section_1">
+					<h4 className="form_input_section_2__heading form_input_section_1__title">
 						2. What are you looking to work on?
 					</h4>
 					<div className="form_input_section_2__details_container">
@@ -159,7 +158,10 @@ const Form = () => {
 								<RangeSlider budget={budget} setBudget={setBudget} />
 							</div>
 						</section>
-						<section className="form_input_sectoion_4">
+						<section className="form_input_sectoion_3">
+							<h4 className="form_input_section_3__heading form_input_section_1__title">
+								3. What services are you interested in?
+							</h4>
 							<div className="form_input_sectoion_4__checkbox_list">
 								<CheckBoxList />
 							</div>

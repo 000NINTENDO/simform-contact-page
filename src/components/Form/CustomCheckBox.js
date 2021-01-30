@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./CustomCheckBox.css";
 
 const CustomCheckBox = ({
@@ -12,6 +12,7 @@ const CustomCheckBox = ({
 	const custom_checkbox = useRef();
 	const check_mark = useRef();
 	const card_container = useRef();
+	const [istrue, setIsTrue] = useState(false);
 
 	const colors = {
 		borderColor: `${color}`,
@@ -22,27 +23,26 @@ const CustomCheckBox = ({
 		let time_out_2;
 		console.log(input_checkbox.current.checked);
 		const toggleCheckBox = () => {
-			if (input_checkbox.current.checked === false) {
+			if (istrue === false) {
 				custom_checkbox.current.style.backgroundColor = color;
 				check_mark.current.style.opacity = "1";
 				card_container.current.style.boxShadow =
 					"0px 5px 10px 1px rgba(0, 0, 0, 0.15)";
-				time_out_1 = setTimeout(() => {
+				setTimeout(() => {
 					check_mark.current.style.transform = "scale(1)";
 				}, 150);
-				clearInterval(time_out_2);
+
 				input_checkbox.current.checked = true;
 				console.log(input_checkbox.current.checked);
+				setIsTrue(!istrue);
 			} else {
 				custom_checkbox.current.style.backgroundColor = "";
-				time_out_2 = setTimeout(() => {
-					check_mark.current.style.opacity = "0";
-				}, 200);
 				card_container.current.style.boxShadow = "";
+				check_mark.current.style.opacity = "0";
 				check_mark.current.style.transform = "scale(0)";
 				input_checkbox.current.checked = false;
-				clearInterval(time_out_1);
 				console.log(input_checkbox.current.checked);
+				setIsTrue(!istrue);
 			}
 		};
 		card_container.current.addEventListener("click", toggleCheckBox);
