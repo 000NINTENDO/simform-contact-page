@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import "./InputSection_1.css";
 
-const InputBox = (handleChange, formDetails) => {
+const InputBox = ({ handleChange, formDetails }) => {
 	const input_name = useRef();
 	const input_email = useRef();
 	const input_contactNumber = useRef();
@@ -29,6 +29,15 @@ const InputBox = (handleChange, formDetails) => {
 				input_label_name.current.style.background = "#ecfbff";
 				input_name.current.style.borderColor = "#6dd8ff";
 			} else if (input_name.current.value === "") {
+				// input_label_name.current.style.transform = "";
+				// input_name.current.style.borderColor = "";
+				// input_label_name.current.style.color = "";
+				// input_label_name.current.style.background = "";
+			}
+		};
+
+		const replaceLabel = () => {
+			if (input_name.current.value === "") {
 				input_label_name.current.style.transform = "";
 				input_name.current.style.borderColor = "";
 				input_label_name.current.style.color = "";
@@ -36,8 +45,8 @@ const InputBox = (handleChange, formDetails) => {
 			}
 		};
 		input_name.current.addEventListener("focus", translateLabel);
-		input_name.current.addEventListener("blur", translateLabel);
-	});
+		input_name.current.addEventListener("blur", replaceLabel);
+	}, [formDetails]);
 
 	useEffect(() => {
 		const translateLabel = () => {
@@ -47,16 +56,21 @@ const InputBox = (handleChange, formDetails) => {
 				input_label_email.current.style.color = "#000";
 				input_label_email.current.style.background = "#ecfbff";
 				input_email.current.style.borderColor = "#6dd8ff";
-			} else if (input_email.current.value === "") {
+			}
+		};
+
+		const replaceLabel = () => {
+			if (input_email.current.value === "") {
 				input_label_email.current.style.transform = "";
 				input_email.current.style.borderColor = "";
 				input_label_email.current.style.color = "";
 				input_label_email.current.style.background = "";
 			}
 		};
+
 		input_email.current.addEventListener("focus", translateLabel);
-		input_email.current.addEventListener("blur", translateLabel);
-	});
+		input_email.current.addEventListener("blur", replaceLabel);
+	}, [formDetails]);
 
 	useEffect(() => {
 		const translateLabel = () => {
@@ -75,7 +89,7 @@ const InputBox = (handleChange, formDetails) => {
 		};
 		input_contactNumber.current.addEventListener("focus", translateLabel);
 		input_contactNumber.current.addEventListener("blur", translateLabel);
-	});
+	}, [formDetails]);
 
 	useEffect(() => {
 		const translateLabel = () => {
@@ -130,7 +144,7 @@ const InputBox = (handleChange, formDetails) => {
 						Your Name*
 					</label>
 					<input
-						onChange={handleChange()}
+						onChange={handleChange}
 						ref={input_name}
 						className="form_input_section_1__input_name__input"
 						name="name"
@@ -150,6 +164,7 @@ const InputBox = (handleChange, formDetails) => {
 							Your Email*
 						</label>
 						<input
+							onChange={handleChange}
 							ref={input_email}
 							className="form_input_section_1__input_name__input"
 							name="email"
@@ -168,6 +183,7 @@ const InputBox = (handleChange, formDetails) => {
 							Your Phone Number
 						</label>
 						<input
+							onChange={handleChange}
 							ref={input_contactNumber}
 							className="form_input_section_1__input_name__input"
 							name="contactNumber"
@@ -186,6 +202,7 @@ const InputBox = (handleChange, formDetails) => {
 						Company Website
 					</label>
 					<input
+						onChange={handleChange}
 						ref={input_company_website}
 						className="form_input_section_1__input_name__input"
 						name="company_website"
@@ -202,6 +219,7 @@ const InputBox = (handleChange, formDetails) => {
 						What’s your company’s biggest challenge today?
 					</label>
 					<input
+						onChange={handleChange}
 						ref={input_conmapanys_challange}
 						className="form_input_section_1__input_name__input"
 						name="conmapanys_challange"
