@@ -1,0 +1,162 @@
+* {
+	box-sizing: border-box;
+}
+
+.fileupload {
+	width: 100%;
+	margin-top: 22px;
+	border: 1px dashed rgba(0, 0, 0, 0.2);
+	position: relative;
+	border-radius: 5px;
+	transition: all 0.2s ease-in-out;
+}
+
+.fileupload__uploadzone {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px 25px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	align-items: center;
+}
+
+.fileupload__uploadzone__file_input_field {
+	height: 0px;
+	position: absolute;
+	top: 0;
+}
+
+.fileupload__uploadzone__file_input_label {
+	padding-left: 17px;
+	font-size: 14px;
+}
+
+.fileupload__uploadzone__logo_file_name {
+	display: flex;
+	width: 400px;
+	flex-direction: row;
+	/* flex-wrap: wrap; */
+	align-items: center;
+}
+
+.fileupload__uploadzone__upload_button {
+	padding: 9px 23px 9px;
+	background: rgb(109, 216, 255);
+	color: #ffffff;
+	border: none;
+	position: relative;
+	line-height: 1.3;
+	letter-spacing: 1px;
+	border-radius: 4px;
+	font-size: 16px;
+	font-family: CircularStd_Medium;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+	outline: none;
+}
+
+.fileupload__uploadzone__logo {
+	width: 24px;
+	height: 24px;
+	display: block;
+}
+
+.fileupload__uploadzone__file_name {
+	height: 0;
+	margin-left: 25px;
+	opacity: 0;
+	color: rgb(61, 61, 61);
+	transition: opacity 0.2s ease;
+}
+
+.fileupload__uploadzone__upload_button__container {
+	position: relative;
+}
+
+@media screen and (max-width: 767px) {
+	.fileupload {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.fileupload__uploadzone {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.fileupload__uploadzone__logo_file_name {
+		justify-content: center;
+	}
+
+	.fileupload__uploadzone__file_name {
+		margin-top: 58px;
+	}
+
+	.fileupload__uploadzone__upload_button {
+		margin-top: 50px;
+		position: relative;
+	}
+
+	.fileupload__uploadzone__file_input_label {
+		max-width: 100%;
+		margin-top: -30px;
+		font-size: 14px;
+		white-space: wrap;
+		text-overflow: visible;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.fileupload__uploadzone__file_input_label {
+		max-width: 80%;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		margin-top: -15px;
+		/* margin-right: 40%; */
+		white-space: normal;
+		text-overflow: visible;
+		overflow: visible;
+	}
+
+	.fileupload__uploadzone__upload_button {
+		margin-top: 50px;
+		position: relative;
+	}
+}
+
+.fileupload__uploadzone__cancel_button {
+	width: 20px;
+	height: 0px;
+	background: rgba(0, 0, 0, 0);
+	position: absolute;
+	top: 10px;
+	left: -40px;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.fileupload__uploadzone__cancel_button_line_1,
+.fileupload__uploadzone__cancel_button_line_2 {
+	width: 15px;
+	height: 2px;
+	background: rgb(61, 61, 61);
+	position: absolute;
+	top: 9px;
+	right: 0;
+	border-radius: 2px;
+	transform: rotate(45deg);
+}
+
+.fileupload__uploadzone__cancel_button_line_2 {
+	transform: rotate(-45deg);
+}

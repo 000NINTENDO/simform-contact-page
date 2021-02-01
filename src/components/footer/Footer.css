@@ -1,0 +1,21 @@
+.footer {
+	position: relative;
+	margin-top: 50px;
+}
+
+.footer__background {
+	width: 100%;
+}
+
+.footer__background__image {
+	width: 100%;
+	right: 0;
+	position: absolute;
+	margin-right: 50px;
+	max-width: 787px;
+}
+
+.footer__branches_section {
+	display: flex;
+	flex-direction: row;
+}

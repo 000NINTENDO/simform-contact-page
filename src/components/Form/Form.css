@@ -7,7 +7,7 @@
 	margin-right: auto;
 	position: relative;
 	background: #ff789300;
-	padding: 25px 30px 50px 50px;
+	padding: 25px 30px 50px 30px;
 }
 
 .form::after {
@@ -46,7 +46,9 @@
 	font-family: CircularStd_Bold !important;
 	font-weight: 700;
 	font-size: 18px;
+	line-height: 1.5;
 	margin-bottom: 30px;
+	color: rgb(61, 61, 61);
 }
 
 .form_input_section_1__input_fields__email_phone_number {
@@ -124,4 +126,65 @@
 .form_input_section_3__heading {
 	margin-top: 35px;
 	margin-bottom: 10px;
+}
+
+.form_input_section_4 {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form_input_section_4__heading {
+	margin-top: 35px;
+}
+
+.form_input_sectoion_4__content_and_calender {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.form_input_sectoion_4__content_and_calender__content__column_1__text {
+	display: flex;
+	align-items: center;
+}
+
+.form_input_sectoion_4__content_and_calender__content__column_1__text_meeting {
+	margin-left: 12px;
+	font-size: 14px;
+	margin-top: 8px;
+	letter-spacing: 0.03em;
+	color: #696969;
+}
+
+.form_input_sectoion_4__content_and_calender__content {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.form_input_sectoion_4__content_and_calender__content__column_1__text_minute {
+	font-weight: 700;
+	font-size: 50px;
+	color: #ff7979;
+}
+
+.form_input_sectoion_4__content_and_calender__content__column_2 {
+	color: #696969;
+	letter-spacing: 0.03em;
+	margin-top: 30px;
+}
+
+.react-calendar {
+	width: 100%;
+	border: none;
+	margin-top: 22px;
+	background: rgba(255, 255, 255, 0.63);
+}
+
+.react-calendar__viewContainer {
 }

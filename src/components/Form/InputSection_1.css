@@ -72,3 +72,13 @@
 		font-size: 15px;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.form_input_section_1__input_field_label {
+		font-size: 14px;
+	}
+
+	.form_input_section_1__input_field {
+		font-size: 14px;
+	}
+}

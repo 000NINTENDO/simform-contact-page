@@ -3,6 +3,8 @@ import FormTitle from "./FormTitle";
 import InputSection_1 from "./InputSection_1";
 import RangeSlider from "./RangeSlider";
 import CheckBoxList from "./CheckBoxList";
+import FileUpload from "./FileUpload";
+import InputSection_4 from "./InputSection_4";
 import "./Form.css";
 
 const Form = () => {
@@ -14,6 +16,7 @@ const Form = () => {
 		conmapanys_challange: "",
 		project_description: "",
 	});
+	const [date, setDate] = useState(new Date());
 	const [budget, setBudget] = useState([100000, 300000]);
 	const [invalid, setInvalid] = useState(false);
 	const project_details_field = useRef();
@@ -158,16 +161,18 @@ const Form = () => {
 								<RangeSlider budget={budget} setBudget={setBudget} />
 							</div>
 						</section>
-						<section className="form_input_sectoion_3">
-							<h4 className="form_input_section_3__heading form_input_section_1__title">
-								3. What services are you interested in?
-							</h4>
-							<div className="form_input_sectoion_4__checkbox_list">
-								<CheckBoxList />
-							</div>
-						</section>
+						<FileUpload />
 					</div>
 				</section>
+				<section className="form_input_sectoion_3">
+					<h4 className="form_input_section_3__heading form_input_section_1__title">
+						3. What services are you interested in?
+					</h4>
+					<div className="form_input_sectoion_4__checkbox_list">
+						<CheckBoxList />
+					</div>
+				</section>
+				<InputSection_4 date={date} setDate={setDate} />
 			</section>
 		</section>
 	);
