@@ -1,6 +1,5 @@
 import React from "react";
 import MapSvg from "../../static/footer-map-c26309b369d51410f3ceb06fe7c24f08.svg";
-import LocationAddress from "./LocationAddress";
 import LocationList from "./LocationList";
 import "./Footer.css";
 
