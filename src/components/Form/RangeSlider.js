@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-import Slider from "@material-ui/core/slider";
+import Slider from "@material-ui/core/Slider";
 import { Tooltip } from "@material-ui/core";
 
 const useStyles = makeStyles({

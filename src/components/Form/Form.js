@@ -68,7 +68,7 @@ const Form = () => {
 	});
 
 	return (
-		<section className="form">
+		<form className="form">
 			<div className="form__background_layer"></div>
 			<section className="form__content">
 				<FormTitle />
@@ -174,7 +174,7 @@ const Form = () => {
 				</section>
 				<InputSection_4 date={date} setDate={setDate} />
 			</section>
-		</section>
+		</form>
 	);
 };
 
